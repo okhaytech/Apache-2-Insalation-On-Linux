@@ -1,0 +1,970 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fmodern\fprq1 Lucida Console;}{\f1\fnil\fcharset1 Cambria Math;}{\f2\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red39\green174\blue96;\red142\green68\blue173;\red243\green156\blue18;\red0\green0\blue255;\red231\green76\blue60;}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9\par
+\cf1 TalentQL@DESKTOP-HAM69BV \cf2 MINGW64 \cf3 ~/Desktop/Vagrant/Altschool/Boxes/Ubuntu64/.vagrant\par
+\cf0 $ vagrant up\par
+Bringing machine 'default' up with 'virtualbox' provider...\par
+==> default: Checking if box 'ubuntu/focal64' version '20220920.0.0' is up to date...\par
+==> default: A newer version of the box 'ubuntu/focal64' for provider 'virtualbox' is\par
+==> default: available! You currently have version '20220920.0.0'. The latest is version\par
+==> default: '20230109.0.0'. Run `vagrant box update` to update.\par
+==> default: Clearing any previously set forwarded ports...\par
+==> default: Clearing any previously set network interfaces...\par
+==> default: Preparing network interfaces based on configuration...\par
+    default: Adapter 1: nat\par
+==> default: Forwarding ports...\par
+    default: 22 (guest) => 2222 (host) (adapter 1)\par
+==> default: Running 'pre-boot' VM customizations...\par
+==> default: Booting VM...\par
+==> default: Waiting for machine to boot. This may take a few minutes...\par
+    default: SSH address: 127.0.0.1:2222\par
+    default: SSH username: vagrant\par
+    default: SSH auth method: private key\par
+==> default: Machine booted and ready!\par
+==> default: Checking for guest additions in VM...\par
+==> default: Mounting shared folders...\par
+    default: /vagrant => C:/Users/TalentQL/Desktop/Vagrant/Altschool/Boxes/Ubuntu64\par
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`\par
+==> default: flag to force provisioning. Provisioners marked to run always will still run.\par
+\par
+\cf1 TalentQL@DESKTOP-HAM69BV \cf2 MINGW64 \cf3 ~/Desktop/Vagrant/Altschool/Boxes/Ubuntu64/.vagrant\par
+\cf0 $ vagrant ssh\par
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.4.0-126-generic x86_64)\par
+\par
+ * Documentation:  {{\field{\*\fldinst{HYPERLINK https://help.ubuntu.com }}{\fldrslt{https://help.ubuntu.com\ul0\cf0}}}}\f0\fs22\par
+ * Management:     {{\field{\*\fldinst{HYPERLINK https://landscape.canonical.com }}{\fldrslt{https://landscape.canonical.com\ul0\cf0}}}}\f0\fs22\par
+ * Support:        {{\field{\*\fldinst{HYPERLINK https://ubuntu.com/advantage }}{\fldrslt{https://ubuntu.com/advantage\ul0\cf0}}}}\f0\fs22\par
+\par
+  System information as of Tue Jan 10 22:59:14 UTC 2023\par
+\par
+  System load:  1.83              Processes:               123\par
+  Usage of /:   4.2% of 38.70GB   Users logged in:         0\par
+  Memory usage: 21%               IPv4 address for enp0s3: 10.0.2.15\par
+  Swap usage:   0%\par
+\par
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s\par
+   just raised the bar for easy, resilient and secure K8s cluster deployment.\par
+\par
+   {{\field{\*\fldinst{HYPERLINK https://ubuntu.com/engage/secure-kubernetes-at-the-edge }}{\fldrslt{https://ubuntu.com/engage/secure-kubernetes-at-the-edge\ul0\cf0}}}}\f0\fs22\par
+\par
+76 updates can be applied immediately.\par
+56 of these updates are standard security updates.\par
+To see these additional updates run: apt list --upgradable\par
+\par
+New release '22.04.1 LTS' available.\par
+Run 'do-release-upgrade' to upgrade to it.\par
+\par
+\par
+Last login: Sun Jan  8 21:52:01 2023 from 10.0.2.2\par
+vagrant@ubuntu-focal:~$ apt upgrade\par
+\cf5 E: \cf0 Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)\par
+\cf5 E: \cf0 Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?\par
+vagrant@ubuntu-focal:~$ sudo apt upgrade\par
+Reading package lists... Done\par
+Building dependency tree\par
+Reading state information... Done\par
+Calculating upgrade... Done\par
+The following NEW packages will be installed:\par
+  libxmlb2 linux-headers-5.4.0-136 linux-headers-5.4.0-136-generic\par
+  linux-image-5.4.0-136-generic linux-modules-5.4.0-136-generic\par
+The following packages will be upgraded:\par
+  apport bind9-dnsutils bind9-host bind9-libs ca-certificates cloud-init curl\par
+  dbus dbus-user-session distro-info-data fwupd git git-man isc-dhcp-client\par
+  isc-dhcp-common kpartx libasn1-8-heimdal libcurl3-gnutls libcurl4\par
+  libdbus-1-3 libexpat1 libfwupd2 libfwupdplugin5 libgmp10 libgssapi3-heimdal\par
+  libhcrypto4-heimdal libheimbase1-heimdal libheimntlm0-heimdal\par
+  libhx509-5-heimdal libkrb5-26-heimdal libksba8 libnss-systemd libntfs-3g883\par
+  libpam-systemd libpcre2-8-0 libperl5.30 libpython3.8 libpython3.8-minimal\par
+  libpython3.8-stdlib libroken18-heimdal libsqlite3-0 libsystemd0 libudev1\par
+  libwind0-heimdal libxml2 linux-headers-generic linux-headers-virtual\par
+  linux-image-virtual linux-virtual login multipath-tools ntfs-3g passwd perl\par
+  perl-base perl-modules-5.30 python3-apport python3-problem-report\par
+  python3-update-manager python3.8 python3.8-minimal snapd sosreport systemd\par
+  systemd-sysv systemd-timesyncd tzdata ubuntu-advantage-tools udev\par
+  update-manager-core zlib1g\par
+71 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.\par
+51 standard security updates\par
+Need to get 113 MB of archives.\par
+After this operation, 199 MB of additional disk space will be used.\par
+Do you want to continue? [Y/n] y\par
+Get:1 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 login amd64 1:4.8.1-1ubuntu5.20.04.4 [221 kB]\par
+Get:2 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libperl5.30 amd64 5.30.0-9ubuntu0.3 [3951 kB]\par
+Get:3 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 perl amd64 5.30.0-9ubuntu0.3 [224 kB]\par
+Get:4 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 perl-base amd64 5.30.0-9ubuntu0.3 [1514 kB]\par
+Get:5 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 perl-modules-5.30 all 5.30.0-9ubuntu0.3 [2739 kB]\par
+Get:6 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 zlib1g amd64 1:1.2.11.dfsg-2ubuntu1.5 [54.2 kB]\par
+Get:7 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libnss-systemd amd64 245.4-4ubuntu3.19 [95.8 kB]\par
+Get:8 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 udev amd64 245.4-4ubuntu3.19 [1367 kB]\par
+Get:9 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libudev1 amd64 245.4-4ubuntu3.19 [75.5 kB]\par
+Get:10 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 systemd-sysv amd64 245.4-4ubuntu3.19 [10.3 kB]\par
+Get:11 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 systemd-timesyncd amd64 245.4-4ubuntu3.19 [28.1 kB]\par
+Get:12 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 dbus amd64 1.12.16-2ubuntu2.3 [151 kB]\par
+Get:13 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libdbus-1-3 amd64 1.12.16-2ubuntu2.3 [179 kB]\par
+Get:14 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libexpat1 amd64 2.2.9-1ubuntu0.6 [74.6 kB]\par
+Get:15 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libpam-systemd amd64 245.4-4ubuntu3.19 [186 kB]\par
+Get:16 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libpcre2-8-0 amd64 10.34-7ubuntu0.1 [198 kB]\par
+Get:17 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 systemd amd64 245.4-4ubuntu3.19 [3812 kB]\par
+Get:18 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libsystemd0 amd64 245.4-4ubuntu3.19 [268 kB]\par
+Get:19 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libpython3.8 amd64 3.8.10-0ubuntu1~20.04.6 [1625 kB]\par
+Get:20 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 python3.8 amd64 3.8.10-0ubuntu1~20.04.6 [387 kB]\par
+Get:21 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.6 [1675 kB]\par
+Get:22 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 python3.8-minimal amd64 3.8.10-0ubuntu1~20.04.6 [1901 kB]\par
+Get:23 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.6 [717 kB]\par
+Get:24 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libsqlite3-0 amd64 3.31.1-4ubuntu0.5 [549 kB]\par
+Get:25 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 ntfs-3g amd64 1:2017.3.23AR.3-3ubuntu1.3 [388 kB]\par
+Get:26 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libntfs-3g883 amd64 1:2017.3.23AR.3-3ubuntu1.3 [150 kB]\par
+Get:27 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 passwd amd64 1:4.8.1-1ubuntu5.20.04.4 [799 kB]\par
+Get:28 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libgmp10 amd64 2:6.2.0+dfsg-4ubuntu0.1 [241 kB]\par
+Get:29 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 ca-certificates all 20211016ubuntu0.20.04.1 [141 kB]\par
+Get:30 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 distro-info-data all 0.43ubuntu1.11 [4672 B]\par
+Get:31 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 isc-dhcp-client amd64 4.4.1-2.1ubuntu5.20.04.4 [247 kB]\par
+Get:32 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 isc-dhcp-common amd64 4.4.1-2.1ubuntu5.20.04.4 [45.0 kB]\par
+Get:33 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libxml2 amd64 2.9.10+dfsg-5ubuntu0.20.04.5 [640 kB]\par
+Get:34 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 tzdata all 2022g-0ubuntu0.20.04.1 [286 kB]\par
+Get:35 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 ubuntu-advantage-tools amd64 27.12~20.04.1 [167 kB]\par
+Get:36 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 bind9-dnsutils amd64 1:9.16.1-0ubuntu2.11 [134 kB]\par
+Get:37 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 bind9-libs amd64 1:9.16.1-0ubuntu2.11 [1108 kB]\par
+Get:38 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 bind9-host amd64 1:9.16.1-0ubuntu2.11 [43.0 kB]\par
+Get:39 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 python3-update-manager all 1:20.04.10.11 [38.0 kB]\par
+Get:40 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 update-manager-core all 1:20.04.10.11 [11.6 kB]\par
+Get:41 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 python3-problem-report all 2.20.11-0ubuntu27.25 [11.0 kB]\par
+Get:42 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 python3-apport all 2.20.11-0ubuntu27.25 [86.4 kB]\par
+Get:43 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 apport all 2.20.11-0ubuntu27.25 [129 kB]\par
+Get:44 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 curl amd64 7.68.0-1ubuntu2.15 [161 kB]\par
+Get:45 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libcurl4 amd64 7.68.0-1ubuntu2.15 [235 kB]\par
+Get:46 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 dbus-user-session amd64 1.12.16-2ubuntu2.3 [9424 B]\par
+Get:47 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libxmlb2 amd64 0.3.6-2build1~20.04.1 [61.6 kB]\par
+Get:48 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 fwupd amd64 1.7.9-1~20.04.1 [2453 kB]\par
+Get:49 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libfwupdplugin5 amd64 1.7.9-1~20.04.1 [170 kB]\par
+Get:50 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libcurl3-gnutls amd64 7.68.0-1ubuntu2.15 [232 kB]\par
+Get:51 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libfwupd2 amd64 1.7.9-1~20.04.1 [92.5 kB]\par
+Get:52 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 git-man all 1:2.25.1-1ubuntu3.6 [887 kB]\par
+Get:53 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 git amd64 1:2.25.1-1ubuntu3.6 [4529 kB]\par
+Get:54 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libroken18-heimdal amd64 7.7.0+dfsg-1ubuntu1.2 [42.3 kB]\par
+Get:55 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libasn1-8-heimdal amd64 7.7.0+dfsg-1ubuntu1.2 [181 kB]\par
+Get:56 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libheimbase1-heimdal amd64 7.7.0+dfsg-1ubuntu1.2 [30.0 kB]\par
+Get:57 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libhcrypto4-heimdal amd64 7.7.0+dfsg-1ubuntu1.2 [87.9 kB]\par
+Get:58 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libwind0-heimdal amd64 7.7.0+dfsg-1ubuntu1.2 [48.0 kB]\par
+Get:59 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libhx509-5-heimdal amd64 7.7.0+dfsg-1ubuntu1.2 [107 kB]\par
+Get:60 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libkrb5-26-heimdal amd64 7.7.0+dfsg-1ubuntu1.2 [207 kB]\par
+Get:61 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libheimntlm0-heimdal amd64 7.7.0+dfsg-1ubuntu1.2 [15.1 kB]\par
+Get:62 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libgssapi3-heimdal amd64 7.7.0+dfsg-1ubuntu1.2 [96.2 kB]\par
+Get:63 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 libksba8 amd64 1.3.5-2ubuntu0.20.04.2 [95.2 kB]\par
+Get:64 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 linux-headers-5.4.0-136 all 5.4.0-136.153 [11.0 MB]\par
+Get:65 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 linux-headers-5.4.0-136-generic amd64 5.4.0-136.153 [1403 kB]\par
+Get:66 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 linux-modules-5.4.0-136-generic amd64 5.4.0-136.153 [15.0 MB]\par
+Get:67 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 linux-image-5.4.0-136-generic amd64 5.4.0-136.153 [10.5 MB]\par
+Get:68 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 linux-virtual amd64 5.4.0.136.134 [1876 B]\par
+Get:69 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 linux-image-virtual amd64 5.4.0.136.134 [2484 B]\par
+Get:70 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 linux-headers-virtual amd64 5.4.0.136.134 [1840 B]\par
+Get:71 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 linux-headers-generic amd64 5.4.0.136.134 [2384 B]\par
+Get:72 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 snapd amd64 2.57.5+20.04ubuntu0.1 [37.6 MB]\par
+Get:72 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 snapd amd64 2.57.5+20.04ubuntu0.1 [37.6 MB]\par
+Get:73 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 sosreport amd64 4.4-1ubuntu0.20.04.1 [305 kB]\par
+Get:74 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 cloud-init all 22.4.2-0ubuntu0~20.04.2 [530 kB]\par
+Get:75 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 kpartx amd64 0.8.3-1ubuntu2.1 [27.8 kB]\par
+Get:76 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 multipath-tools amd64 0.8.3-1ubuntu2.1 [290 kB]\par
+Fetched 103 MB in 7min 38s (225 kB/s)\par
+Extracting templates from packages: 100%\par
+Preconfiguring packages ...\par
+(Reading database ... 63504 files and directories currently installed.)\par
+Preparing to unpack .../login_1%3a4.8.1-1ubuntu5.20.04.4_amd64.deb ...\par
+Unpacking login (1:4.8.1-1ubuntu5.20.04.4) over (1:4.8.1-1ubuntu5.20.04.2) ...\par
+Setting up login (1:4.8.1-1ubuntu5.20.04.4) ...\par
+(Reading database ... 63504 files and directories currently installed.)\par
+Preparing to unpack .../libperl5.30_5.30.0-9ubuntu0.3_amd64.deb ...\par
+Unpacking libperl5.30:amd64 (5.30.0-9ubuntu0.3) over (5.30.0-9ubuntu0.2) ...\par
+Preparing to unpack .../perl_5.30.0-9ubuntu0.3_amd64.deb ...\par
+Unpacking perl (5.30.0-9ubuntu0.3) over (5.30.0-9ubuntu0.2) ...\par
+Preparing to unpack .../perl-base_5.30.0-9ubuntu0.3_amd64.deb ...\par
+Unpacking perl-base (5.30.0-9ubuntu0.3) over (5.30.0-9ubuntu0.2) ...\par
+Setting up perl-base (5.30.0-9ubuntu0.3) ...\par
+(Reading database ... 63504 files and directories currently installed.)\par
+Preparing to unpack .../perl-modules-5.30_5.30.0-9ubuntu0.3_all.deb ...\par
+Unpacking perl-modules-5.30 (5.30.0-9ubuntu0.3) over (5.30.0-9ubuntu0.2) ...\par
+Preparing to unpack .../zlib1g_1%3a1.2.11.dfsg-2ubuntu1.5_amd64.deb ...\par
+Unpacking zlib1g:amd64 (1:1.2.11.dfsg-2ubuntu1.5) over (1:1.2.11.dfsg-2ubuntu1.3) ...\par
+Setting up zlib1g:amd64 (1:1.2.11.dfsg-2ubuntu1.5) ...\par
+(Reading database ... 63504 files and directories currently installed.)\par
+Preparing to unpack .../libnss-systemd_245.4-4ubuntu3.19_amd64.deb ...\par
+Unpacking libnss-systemd:amd64 (245.4-4ubuntu3.19) over (245.4-4ubuntu3.17) ...\par
+Preparing to unpack .../udev_245.4-4ubuntu3.19_amd64.deb ...\par
+Unpacking udev (245.4-4ubuntu3.19) over (245.4-4ubuntu3.17) ...\par
+Preparing to unpack .../libudev1_245.4-4ubuntu3.19_amd64.deb ...\par
+Unpacking libudev1:amd64 (245.4-4ubuntu3.19) over (245.4-4ubuntu3.17) ...\par
+Setting up libudev1:amd64 (245.4-4ubuntu3.19) ...\par
+(Reading database ... 63504 files and directories currently installed.)\par
+Preparing to unpack .../0-systemd-sysv_245.4-4ubuntu3.19_amd64.deb ...\par
+Unpacking systemd-sysv (245.4-4ubuntu3.19) over (245.4-4ubuntu3.17) ...\par
+Preparing to unpack .../1-systemd-timesyncd_245.4-4ubuntu3.19_amd64.deb ...\par
+Unpacking systemd-timesyncd (245.4-4ubuntu3.19) over (245.4-4ubuntu3.17) ...\par
+Preparing to unpack .../2-dbus_1.12.16-2ubuntu2.3_amd64.deb ...\par
+Unpacking dbus (1.12.16-2ubuntu2.3) over (1.12.16-2ubuntu2.2) ...\par
+Preparing to unpack .../3-libdbus-1-3_1.12.16-2ubuntu2.3_amd64.deb ...\par
+Unpacking libdbus-1-3:amd64 (1.12.16-2ubuntu2.3) over (1.12.16-2ubuntu2.2) ...\par
+Preparing to unpack .../4-libexpat1_2.2.9-1ubuntu0.6_amd64.deb ...\par
+Unpacking libexpat1:amd64 (2.2.9-1ubuntu0.6) over (2.2.9-1ubuntu0.4) ...\par
+Preparing to unpack .../5-libpam-systemd_245.4-4ubuntu3.19_amd64.deb ...\par
+Unpacking libpam-systemd:amd64 (245.4-4ubuntu3.19) over (245.4-4ubuntu3.17) ...\par
+Preparing to unpack .../6-libpcre2-8-0_10.34-7ubuntu0.1_amd64.deb ...\par
+Unpacking libpcre2-8-0:amd64 (10.34-7ubuntu0.1) over (10.34-7) ...\par
+Setting up libpcre2-8-0:amd64 (10.34-7ubuntu0.1) ...\par
+(Reading database ... 63504 files and directories currently installed.)\par
+Preparing to unpack .../systemd_245.4-4ubuntu3.19_amd64.deb ...\par
+Unpacking systemd (245.4-4ubuntu3.19) over (245.4-4ubuntu3.17) ...\par
+Preparing to unpack .../libsystemd0_245.4-4ubuntu3.19_amd64.deb ...\par
+Unpacking libsystemd0:amd64 (245.4-4ubuntu3.19) over (245.4-4ubuntu3.17) ...\par
+Setting up libsystemd0:amd64 (245.4-4ubuntu3.19) ...\par
+(Reading database ... 63504 files and directories currently installed.)\par
+Preparing to unpack .../0-libpython3.8_3.8.10-0ubuntu1~20.04.6_amd64.deb ...\par
+Unpacking libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.6) over (3.8.10-0ubuntu1~20.04.5) ...\par
+Preparing to unpack .../1-python3.8_3.8.10-0ubuntu1~20.04.6_amd64.deb ...\par
+Unpacking python3.8 (3.8.10-0ubuntu1~20.04.6) over (3.8.10-0ubuntu1~20.04.5) ...\par
+Preparing to unpack .../2-libpython3.8-stdlib_3.8.10-0ubuntu1~20.04.6_amd64.deb ...\par
+Unpacking libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.6) over (3.8.10-0ubuntu1~20.04.5) ...\par
+Preparing to unpack .../3-python3.8-minimal_3.8.10-0ubuntu1~20.04.6_amd64.deb ...\par
+Unpacking python3.8-minimal (3.8.10-0ubuntu1~20.04.6) over (3.8.10-0ubuntu1~20.04.5) ...\par
+Preparing to unpack .../4-libpython3.8-minimal_3.8.10-0ubuntu1~20.04.6_amd64.deb ...\par
+Unpacking libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.6) over (3.8.10-0ubuntu1~20.04.5) ...\par
+Preparing to unpack .../5-libsqlite3-0_3.31.1-4ubuntu0.5_amd64.deb ...\par
+Unpacking libsqlite3-0:amd64 (3.31.1-4ubuntu0.5) over (3.31.1-4ubuntu0.4) ...\par
+Preparing to unpack .../6-ntfs-3g_1%3a2017.3.23AR.3-3ubuntu1.3_amd64.deb ...\par
+Unpacking ntfs-3g (1:2017.3.23AR.3-3ubuntu1.3) over (1:2017.3.23AR.3-3ubuntu1.2) ...\par
+Preparing to unpack .../7-libntfs-3g883_1%3a2017.3.23AR.3-3ubuntu1.3_amd64.deb ...\par
+Unpacking libntfs-3g883 (1:2017.3.23AR.3-3ubuntu1.3) over (1:2017.3.23AR.3-3ubuntu1.2) ...\par
+Preparing to unpack .../8-passwd_1%3a4.8.1-1ubuntu5.20.04.4_amd64.deb ...\par
+Unpacking passwd (1:4.8.1-1ubuntu5.20.04.4) over (1:4.8.1-1ubuntu5.20.04.2) ...\par
+Setting up passwd (1:4.8.1-1ubuntu5.20.04.4) ...\par
+(Reading database ... 63504 files and directories currently installed.)\par
+Preparing to unpack .../libgmp10_2%3a6.2.0+dfsg-4ubuntu0.1_amd64.deb ...\par
+Unpacking libgmp10:amd64 (2:6.2.0+dfsg-4ubuntu0.1) over (2:6.2.0+dfsg-4) ...\par
+Setting up libgmp10:amd64 (2:6.2.0+dfsg-4ubuntu0.1) ...\par
+(Reading database ... 63504 files and directories currently installed.)\par
+Preparing to unpack .../00-ca-certificates_20211016ubuntu0.20.04.1_all.deb ...\par
+Unpacking ca-certificates (20211016ubuntu0.20.04.1) over (20211016~20.04.1) ...\par
+Preparing to unpack .../01-distro-info-data_0.43ubuntu1.11_all.deb ...\par
+Unpacking distro-info-data (0.43ubuntu1.11) over (0.43ubuntu1.10) ...\par
+Preparing to unpack .../02-isc-dhcp-client_4.4.1-2.1ubuntu5.20.04.4_amd64.deb ...\par
+Unpacking isc-dhcp-client (4.4.1-2.1ubuntu5.20.04.4) over (4.4.1-2.1ubuntu5.20.04.3) ...\par
+Preparing to unpack .../03-isc-dhcp-common_4.4.1-2.1ubuntu5.20.04.4_amd64.deb ...\par
+Unpacking isc-dhcp-common (4.4.1-2.1ubuntu5.20.04.4) over (4.4.1-2.1ubuntu5.20.04.3) ...\par
+Preparing to unpack .../04-libxml2_2.9.10+dfsg-5ubuntu0.20.04.5_amd64.deb ...\par
+Unpacking libxml2:amd64 (2.9.10+dfsg-5ubuntu0.20.04.5) over (2.9.10+dfsg-5ubuntu0.20.04.4) ...\par
+Preparing to unpack .../05-tzdata_2022g-0ubuntu0.20.04.1_all.deb ...\par
+Unpacking tzdata (2022g-0ubuntu0.20.04.1) over (2022c-0ubuntu0.20.04.0) ...\par
+Preparing to unpack .../06-ubuntu-advantage-tools_27.12~20.04.1_amd64.deb ...\par
+Unpacking ubuntu-advantage-tools (27.12~20.04.1) over (27.10.1~20.04.1) ...\par
+Preparing to unpack .../07-bind9-dnsutils_1%3a9.16.1-0ubuntu2.11_amd64.deb ...\par
+Unpacking bind9-dnsutils (1:9.16.1-0ubuntu2.11) over (1:9.16.1-0ubuntu2.10) ...\par
+Preparing to unpack .../08-bind9-libs_1%3a9.16.1-0ubuntu2.11_amd64.deb ...\par
+Unpacking bind9-libs:amd64 (1:9.16.1-0ubuntu2.11) over (1:9.16.1-0ubuntu2.10) ...\par
+Preparing to unpack .../09-bind9-host_1%3a9.16.1-0ubuntu2.11_amd64.deb ...\par
+Unpacking bind9-host (1:9.16.1-0ubuntu2.11) over (1:9.16.1-0ubuntu2.10) ...\par
+Preparing to unpack .../10-python3-update-manager_1%3a20.04.10.11_all.deb ...\par
+Unpacking python3-update-manager (1:20.04.10.11) over (1:20.04.10.10) ...\par
+Preparing to unpack .../11-update-manager-core_1%3a20.04.10.11_all.deb ...\par
+Unpacking update-manager-core (1:20.04.10.11) over (1:20.04.10.10) ...\par
+Preparing to unpack .../12-python3-problem-report_2.20.11-0ubuntu27.25_all.deb ...\par
+Unpacking python3-problem-report (2.20.11-0ubuntu27.25) over (2.20.11-0ubuntu27.24) ...\par
+Preparing to unpack .../13-python3-apport_2.20.11-0ubuntu27.25_all.deb ...\par
+Unpacking python3-apport (2.20.11-0ubuntu27.25) over (2.20.11-0ubuntu27.24) ...\par
+Preparing to unpack .../14-apport_2.20.11-0ubuntu27.25_all.deb ...\par
+Unpacking apport (2.20.11-0ubuntu27.25) over (2.20.11-0ubuntu27.24) ...\par
+Preparing to unpack .../15-curl_7.68.0-1ubuntu2.15_amd64.deb ...\par
+Unpacking curl (7.68.0-1ubuntu2.15) over (7.68.0-1ubuntu2.13) ...\par
+Preparing to unpack .../16-libcurl4_7.68.0-1ubuntu2.15_amd64.deb ...\par
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.15) over (7.68.0-1ubuntu2.13) ...\par
+Preparing to unpack .../17-dbus-user-session_1.12.16-2ubuntu2.3_amd64.deb ...\par
+Unpacking dbus-user-session (1.12.16-2ubuntu2.3) over (1.12.16-2ubuntu2.2) ...\par
+Selecting previously unselected package libxmlb2:amd64.\par
+Preparing to unpack .../18-libxmlb2_0.3.6-2build1~20.04.1_amd64.deb ...\par
+Unpacking libxmlb2:amd64 (0.3.6-2build1~20.04.1) ...\par
+Preparing to unpack .../19-fwupd_1.7.9-1~20.04.1_amd64.deb ...\par
+Unpacking fwupd (1.7.9-1~20.04.1) over (1.7.5-3~20.04.1) ...\par
+Preparing to unpack .../20-libfwupdplugin5_1.7.9-1~20.04.1_amd64.deb ...\par
+Unpacking libfwupdplugin5:amd64 (1.7.9-1~20.04.1) over (1.7.5-3~20.04.1) ...\par
+Preparing to unpack .../21-libcurl3-gnutls_7.68.0-1ubuntu2.15_amd64.deb ...\par
+Unpacking libcurl3-gnutls:amd64 (7.68.0-1ubuntu2.15) over (7.68.0-1ubuntu2.13) ...\par
+Preparing to unpack .../22-libfwupd2_1.7.9-1~20.04.1_amd64.deb ...\par
+Unpacking libfwupd2:amd64 (1.7.9-1~20.04.1) over (1.7.5-3~20.04.1) ...\par
+Preparing to unpack .../23-git-man_1%3a2.25.1-1ubuntu3.6_all.deb ...\par
+Unpacking git-man (1:2.25.1-1ubuntu3.6) over (1:2.25.1-1ubuntu3.5) ...\par
+Preparing to unpack .../24-git_1%3a2.25.1-1ubuntu3.6_amd64.deb ...\par
+Unpacking git (1:2.25.1-1ubuntu3.6) over (1:2.25.1-1ubuntu3.5) ...\par
+Preparing to unpack .../25-libroken18-heimdal_7.7.0+dfsg-1ubuntu1.2_amd64.deb ...\par
+Unpacking libroken18-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) over (7.7.0+dfsg-1ubuntu1) ...\par
+Preparing to unpack .../26-libasn1-8-heimdal_7.7.0+dfsg-1ubuntu1.2_amd64.deb ...\par
+Unpacking libasn1-8-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) over (7.7.0+dfsg-1ubuntu1) ...\par
+Preparing to unpack .../27-libheimbase1-heimdal_7.7.0+dfsg-1ubuntu1.2_amd64.deb ...\par
+Unpacking libheimbase1-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) over (7.7.0+dfsg-1ubuntu1) ...\par
+Preparing to unpack .../28-libhcrypto4-heimdal_7.7.0+dfsg-1ubuntu1.2_amd64.deb ...\par
+Unpacking libhcrypto4-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) over (7.7.0+dfsg-1ubuntu1) ...\par
+Preparing to unpack .../29-libwind0-heimdal_7.7.0+dfsg-1ubuntu1.2_amd64.deb ...\par
+Unpacking libwind0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) over (7.7.0+dfsg-1ubuntu1) ...\par
+Preparing to unpack .../30-libhx509-5-heimdal_7.7.0+dfsg-1ubuntu1.2_amd64.deb ...\par
+Unpacking libhx509-5-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) over (7.7.0+dfsg-1ubuntu1) ...\par
+Preparing to unpack .../31-libkrb5-26-heimdal_7.7.0+dfsg-1ubuntu1.2_amd64.deb ...\par
+Unpacking libkrb5-26-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) over (7.7.0+dfsg-1ubuntu1) ...\par
+Preparing to unpack .../32-libheimntlm0-heimdal_7.7.0+dfsg-1ubuntu1.2_amd64.deb ...\par
+Unpacking libheimntlm0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) over (7.7.0+dfsg-1ubuntu1) ...\par
+Preparing to unpack .../33-libgssapi3-heimdal_7.7.0+dfsg-1ubuntu1.2_amd64.deb ...\par
+Unpacking libgssapi3-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) over (7.7.0+dfsg-1ubuntu1) ...\par
+Preparing to unpack .../34-libksba8_1.3.5-2ubuntu0.20.04.2_amd64.deb ...\par
+Unpacking libksba8:amd64 (1.3.5-2ubuntu0.20.04.2) over (1.3.5-2) ...\par
+Selecting previously unselected package linux-headers-5.4.0-136.\par
+Preparing to unpack .../35-linux-headers-5.4.0-136_5.4.0-136.153_all.deb ...\par
+Unpacking linux-headers-5.4.0-136 (5.4.0-136.153) ...\par
+Selecting previously unselected package linux-headers-5.4.0-136-generic.\par
+Preparing to unpack .../36-linux-headers-5.4.0-136-generic_5.4.0-136.153_amd64.deb ...\par
+Unpacking linux-headers-5.4.0-136-generic (5.4.0-136.153) ...\par
+Selecting previously unselected package linux-modules-5.4.0-136-generic.\par
+Preparing to unpack .../37-linux-modules-5.4.0-136-generic_5.4.0-136.153_amd64.deb ...\par
+Unpacking linux-modules-5.4.0-136-generic (5.4.0-136.153) ...\par
+Selecting previously unselected package linux-image-5.4.0-136-generic.\par
+Preparing to unpack .../38-linux-image-5.4.0-136-generic_5.4.0-136.153_amd64.deb ...\par
+Unpacking linux-image-5.4.0-136-generic (5.4.0-136.153) ...\par
+Preparing to unpack .../39-linux-virtual_5.4.0.136.134_amd64.deb ...\par
+Unpacking linux-virtual (5.4.0.136.134) over (5.4.0.126.127) ...\par
+Preparing to unpack .../40-linux-image-virtual_5.4.0.136.134_amd64.deb ...\par
+Unpacking linux-image-virtual (5.4.0.136.134) over (5.4.0.126.127) ...\par
+Preparing to unpack .../41-linux-headers-virtual_5.4.0.136.134_amd64.deb ...\par
+Unpacking linux-headers-virtual (5.4.0.136.134) over (5.4.0.126.127) ...\par
+Preparing to unpack .../42-linux-headers-generic_5.4.0.136.134_amd64.deb ...\par
+Unpacking linux-headers-generic (5.4.0.136.134) over (5.4.0.126.127) ...\par
+Preparing to unpack .../43-snapd_2.57.5+20.04ubuntu0.1_amd64.deb ...\par
+Unpacking snapd (2.57.5+20.04ubuntu0.1) over (2.55.5+20.04) ...\par
+Preparing to unpack .../44-sosreport_4.4-1ubuntu0.20.04.1_amd64.deb ...\par
+Unpacking sosreport (4.4-1ubuntu0.20.04.1) over (4.3-1ubuntu0.20.04.1) ...\par
+Preparing to unpack .../45-cloud-init_22.4.2-0ubuntu0~20.04.2_all.deb ...\par
+Unpacking cloud-init (22.4.2-0ubuntu0~20.04.2) over (22.2-0ubuntu1~20.04.3) ...\par
+Preparing to unpack .../46-kpartx_0.8.3-1ubuntu2.1_amd64.deb ...\par
+Unpacking kpartx (0.8.3-1ubuntu2.1) over (0.8.3-1ubuntu2) ...\par
+Preparing to unpack .../47-multipath-tools_0.8.3-1ubuntu2.1_amd64.deb ...\par
+Warning: Stopping multipath-tools.service, but it can still be activated by:\par
+  multipathd.socket\par
+Unpacking multipath-tools (0.8.3-1ubuntu2.1) over (0.8.3-1ubuntu2) ...\par
+Setting up libksba8:amd64 (1.3.5-2ubuntu0.20.04.2) ...\par
+Setting up libexpat1:amd64 (2.2.9-1ubuntu0.6) ...\par
+Setting up libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.6) ...\par
+Setting up perl-modules-5.30 (5.30.0-9ubuntu0.3) ...\par
+Setting up python3-problem-report (2.20.11-0ubuntu27.25) ...\par
+Setting up distro-info-data (0.43ubuntu1.11) ...\par
+Setting up libxmlb2:amd64 (0.3.6-2build1~20.04.1) ...\par
+Setting up libsqlite3-0:amd64 (3.31.1-4ubuntu0.5) ...\par
+Setting up isc-dhcp-client (4.4.1-2.1ubuntu5.20.04.4) ...\par
+Setting up libntfs-3g883 (1:2017.3.23AR.3-3ubuntu1.3) ...\par
+Setting up libcurl3-gnutls:amd64 (7.68.0-1ubuntu2.15) ...\par
+Setting up ntfs-3g (1:2017.3.23AR.3-3ubuntu1.3) ...\par
+Setting up python3-apport (2.20.11-0ubuntu27.25) ...\par
+Setting up tzdata (2022g-0ubuntu0.20.04.1) ...\par
+\par
+Current default time zone: 'Etc/UTC'\par
+Local time is now:      Tue Jan 10 23:08:57 UTC 2023.\par
+Universal Time is now:  Tue Jan 10 23:08:57 UTC 2023.\par
+Run 'dpkg-reconfigure tzdata' if you wish to change it.\par
+\par
+Setting up ca-certificates (20211016ubuntu0.20.04.1) ...\par
+Updating certificates in /etc/ssl/certs...\par
+rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL\par
+0 added, 3 removed; done.\par
+Setting up linux-modules-5.4.0-136-generic (5.4.0-136.153) ...\par
+Setting up libdbus-1-3:amd64 (1.12.16-2ubuntu2.3) ...\par
+Setting up dbus (1.12.16-2ubuntu2.3) ...\par
+A reboot is required to replace the running dbus-daemon.\par
+Please reboot the system when convenient.\par
+Setting up udev (245.4-4ubuntu3.19) ...\par
+update-initramfs: deferring update (trigger activated)\par
+Setting up libroken18-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) ...\par
+Setting up sosreport (4.4-1ubuntu0.20.04.1) ...\par
+Setting up python3.8-minimal (3.8.10-0ubuntu1~20.04.6) ...\par
+Setting up python3-update-manager (1:20.04.10.11) ...\par
+Setting up kpartx (0.8.3-1ubuntu2.1) ...\par
+Setting up libperl5.30:amd64 (5.30.0-9ubuntu0.3) ...\par
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.15) ...\par
+Setting up git-man (1:2.25.1-1ubuntu3.6) ...\par
+Setting up isc-dhcp-common (4.4.1-2.1ubuntu5.20.04.4) ...\par
+Setting up curl (7.68.0-1ubuntu2.15) ...\par
+Setting up ubuntu-advantage-tools (27.12~20.04.1) ...\par
+Installing new version of config file /etc/apt/apt.conf.d/20apt-esm-hook.conf ...\par
+Installing new version of config file /etc/ubuntu-advantage/help_data.yaml ...\par
+Installing new version of config file /etc/ubuntu-advantage/uaclient.conf ...\par
+Installing new version of config file /etc/update-motd.d/91-contract-ua-esm-status ...\par
+Setting up linux-headers-5.4.0-136 (5.4.0-136.153) ...\par
+Setting up linux-image-5.4.0-136-generic (5.4.0-136.153) ...\par
+I: /boot/vmlinuz is now a symlink to vmlinuz-5.4.0-136-generic\par
+I: /boot/initrd.img is now a symlink to initrd.img-5.4.0-136-generic\par
+Setting up libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.6) ...\par
+Setting up python3.8 (3.8.10-0ubuntu1~20.04.6) ...\par
+Setting up libxml2:amd64 (2.9.10+dfsg-5ubuntu0.20.04.5) ...\par
+Setting up libheimbase1-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) ...\par
+Setting up cloud-init (22.4.2-0ubuntu0~20.04.2) ...\par
+Installing new version of config file /etc/cloud/cloud.cfg ...\par
+Setting up bind9-libs:amd64 (1:9.16.1-0ubuntu2.11) ...\par
+Setting up libasn1-8-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) ...\par
+Setting up libfwupd2:amd64 (1.7.9-1~20.04.1) ...\par
+Setting up libhcrypto4-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) ...\par
+Setting up apport (2.20.11-0ubuntu27.25) ...\par
+apport-autoreport.service is a disabled or a static unit, not starting it.\par
+Setting up multipath-tools (0.8.3-1ubuntu2.1) ...\par
+Setting up perl (5.30.0-9ubuntu0.3) ...\par
+Setting up libwind0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) ...\par
+Setting up libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.6) ...\par
+Setting up git (1:2.25.1-1ubuntu3.6) ...\par
+Setting up linux-headers-5.4.0-136-generic (5.4.0-136.153) ...\par
+Setting up update-manager-core (1:20.04.10.11) ...\par
+Setting up linux-image-virtual (5.4.0.136.134) ...\par
+Setting up bind9-host (1:9.16.1-0ubuntu2.11) ...\par
+Setting up libfwupdplugin5:amd64 (1.7.9-1~20.04.1) ...\par
+Setting up fwupd (1.7.9-1~20.04.1) ...\par
+Installing new version of config file /etc/fwupd/redfish.conf ...\par
+fwupd-offline-update.service is a disabled or a static unit not running, not sta\par
+fwupd-refresh.service is a disabled or a static unit not running, not starting i\par
+fwupd.service is a disabled or a static unit not running, not starting it.\par
+Setting up libhx509-5-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) ...\par
+Setting up linux-headers-generic (5.4.0.136.134) ...\par
+Setting up bind9-dnsutils (1:9.16.1-0ubuntu2.11) ...\par
+Setting up libkrb5-26-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) ...\par
+Setting up linux-headers-virtual (5.4.0.136.134) ...\par
+Setting up libheimntlm0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) ...\par
+Setting up linux-virtual (5.4.0.136.134) ...\par
+Setting up libgssapi3-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.2) ...\par
+Setting up systemd (245.4-4ubuntu3.19) ...\par
+Setting up systemd-timesyncd (245.4-4ubuntu3.19) ...\par
+Setting up systemd-sysv (245.4-4ubuntu3.19) ...\par
+Setting up libnss-systemd:amd64 (245.4-4ubuntu3.19) ...\par
+Setting up libpam-systemd:amd64 (245.4-4ubuntu3.19) ...\par
+Setting up dbus-user-session (1.12.16-2ubuntu2.3) ...\par
+Setting up snapd (2.57.5+20.04ubuntu0.1) ...\par
+Installing new version of config file /etc/apparmor.d/usr.lib.snapd.snap-confine\par
+Created symlink /etc/systemd/system/multi-user.target.wants/snapd.aa-prompt-listtener.service.\par
+snapd.failure.service is a disabled or a static unit not running, not starting i\par
+snapd.snap-repair.service is a disabled or a static unit not running, not starti\par
+Processing triggers for mime-support (3.64ubuntu1) ...\par
+Processing triggers for initramfs-tools (0.136ubuntu6.7) ...\par
+update-initramfs: Generating /boot/initrd.img-5.4.0-126-generic\par
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...\par
+Processing triggers for rsyslog (8.2001.0-1ubuntu1.3) ...\par
+Processing triggers for man-db (2.9.1-1) ...\par
+Processing triggers for ca-certificates (20211016ubuntu0.20.04.1) ...\par
+Updating certificates in /etc/ssl/certs...\par
+0 added, 0 removed; done.\par
+Running hooks in /etc/ca-certificates/update.d...\par
+done.\par
+Processing triggers for linux-image-5.4.0-136-generic (5.4.0-136.153) ...\par
+/etc/kernel/postinst.d/initramfs-tools:\par
+update-initramfs: Generating /boot/initrd.img-5.4.0-136-generic\par
+/etc/kernel/postinst.d/zz-update-grub:\par
+Sourcing file `/etc/default/grub'\par
+Sourcing file `/etc/default/grub.d/50-cloudimg-settings.cfg'\par
+Sourcing file `/etc/default/grub.d/init-select.cfg'\par
+Generating grub configuration file ...\par
+Found linux image: /boot/vmlinuz-5.4.0-136-generic\par
+Found initrd image: /boot/initrd.img-5.4.0-136-generic\par
+Found linux image: /boot/vmlinuz-5.4.0-126-generic\par
+Found initrd image: /boot/initrd.img-5.4.0-126-generic\par
+done\par
+vagrant@ubuntu-focal:~$ apt install apache2\par
+\cf5 E: \cf0 Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission d\par
+\cf5 E: \cf0 Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y\par
+vagrant@ubuntu-focal:~$ sudo apt insatll apache2\par
+\cf5 E: \cf0 Invalid operation insatll\par
+vagrant@ubuntu-focal:~$ sudo ap install apache2\par
+sudo: ap: command not found\par
+vagrant@ubuntu-focal:~$ sudo apt install apache2\par
+Reading package lists... Done\par
+Building dependency tree\par
+Reading state information... Done\par
+The following additional packages will be installed:\par
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sql\par
+  ssl-cert\par
+Suggested packages:\par
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser openss\par
+The following NEW packages will be installed:\par
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1\par
+  liblua5.2-0 ssl-cert\par
+0 upgraded, 11 newly installed, 0 to remove and 0 not upgraded.\par
+Need to get 1867 kB of archives.\par
+After this operation, 8095 kB of additional disk space will be used.\par
+Do you want to continue? [Y/n] y\par
+Get:1 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal/main\ul0\cf0}}}}\f0\fs22  amd64 libapr1 amd64 1.6.5-1ubu\par
+Get:2 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal/main\ul0\cf0}}}}\f0\fs22  amd64 libaprutil1 amd64 1.6.1-\par
+Get:3 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal/main\ul0\cf0}}}}\f0\fs22  amd64 libaprutil1-dbd-sqlite3\par
+Get:4 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal/main\ul0\cf0}}}}\f0\fs22  amd64 libaprutil1-ldap amd64 1\par
+Get:5 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal/main\ul0\cf0}}}}\f0\fs22  amd64 libjansson4 amd64 2.12-1\par
+Get:6 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal/main\ul0\cf0}}}}\f0\fs22  amd64 liblua5.2-0 amd64 5.2.4-\par
+Get:7 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 apache2-bin amd6\par
+Get:8 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 apache2-data all\par
+Get:9 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 apache2-utils am\par
+Get:10 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal-updates/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal-updates/main\ul0\cf0}}}}\f0\fs22  amd64 apache2 amd64 2\par
+Get:11 {{\field{\*\fldinst{HYPERLINK http://archive.ubuntu.com/ubuntu focal/main }}{\fldrslt{http://archive.ubuntu.com/ubuntu focal/main\ul0\cf0}}}}\f0\fs22  amd64 ssl-cert all 1.0.39 [17\par
+Fetched 1867 kB in 19s (97.7 kB/s)\par
+Preconfiguring packages ...\par
+Selecting previously unselected package libapr1:amd64.\par
+(Reading database ... 94689 files and directories currently installed.)\par
+Preparing to unpack .../00-libapr1_1.6.5-1ubuntu1_amd64.deb ...\par
+Unpacking libapr1:amd64 (1.6.5-1ubuntu1) ...\par
+Selecting previously unselected package libaprutil1:amd64.\par
+Preparing to unpack .../01-libaprutil1_1.6.1-4ubuntu2_amd64.deb ...\par
+Unpacking libaprutil1:amd64 (1.6.1-4ubuntu2) ...\par
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.\par
+Preparing to unpack .../02-libaprutil1-dbd-sqlite3_1.6.1-4ubuntu2_amd64.deb ...\par
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2) ...\par
+Selecting previously unselected package libaprutil1-ldap:amd64.\par
+Preparing to unpack .../03-libaprutil1-ldap_1.6.1-4ubuntu2_amd64.deb ...\par
+Unpacking libaprutil1-ldap:amd64 (1.6.1-4ubuntu2) ...\par
+Selecting previously unselected package libjansson4:amd64.\par
+Preparing to unpack .../04-libjansson4_2.12-1build1_amd64.deb ...\par
+Unpacking libjansson4:amd64 (2.12-1build1) ...\par
+Selecting previously unselected package liblua5.2-0:amd64.\par
+Preparing to unpack .../05-liblua5.2-0_5.2.4-1.1build3_amd64.deb ...\par
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build3) ...\par
+Selecting previously unselected package apache2-bin.\par
+Preparing to unpack .../06-apache2-bin_2.4.41-4ubuntu3.12_amd64.deb ...\par
+Unpacking apache2-bin (2.4.41-4ubuntu3.12) ...\par
+Selecting previously unselected package apache2-data.\par
+Preparing to unpack .../07-apache2-data_2.4.41-4ubuntu3.12_all.deb ...\par
+Unpacking apache2-data (2.4.41-4ubuntu3.12) ...\par
+Selecting previously unselected package apache2-utils.\par
+Preparing to unpack .../08-apache2-utils_2.4.41-4ubuntu3.12_amd64.deb ...\par
+Unpacking apache2-utils (2.4.41-4ubuntu3.12) ...\par
+Selecting previously unselected package apache2.\par
+Preparing to unpack .../09-apache2_2.4.41-4ubuntu3.12_amd64.deb ...\par
+Unpacking apache2 (2.4.41-4ubuntu3.12) ...\par
+Selecting previously unselected package ssl-cert.\par
+Preparing to unpack .../10-ssl-cert_1.0.39_all.deb ...\par
+Unpacking ssl-cert (1.0.39) ...\par
+Setting up libapr1:amd64 (1.6.5-1ubuntu1) ...\par
+Setting up libjansson4:amd64 (2.12-1build1) ...\par
+Setting up ssl-cert (1.0.39) ...\par
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build3) ...\par
+Setting up apache2-data (2.4.41-4ubuntu3.12) ...\par
+Setting up libaprutil1:amd64 (1.6.1-4ubuntu2) ...\par
+Setting up libaprutil1-ldap:amd64 (1.6.1-4ubuntu2) ...\par
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2) ...\par
+Setting up apache2-utils (2.4.41-4ubuntu3.12) ...\par
+Setting up apache2-bin (2.4.41-4ubuntu3.12) ...\par
+Setting up apache2 (2.4.41-4ubuntu3.12) ...\par
+Enabling module mpm_event.\par
+Enabling module authz_core.\par
+Enabling module authz_host.\par
+Enabling module authn_core.\par
+Enabling module auth_basic.\par
+Enabling module access_compat.\par
+Enabling module authn_file.\par
+Enabling module authz_user.\par
+Enabling module alias.\par
+Enabling module dir.\par
+Enabling module autoindex.\par
+Enabling module env.\par
+Enabling module mime.\par
+Enabling module negotiation.\par
+Enabling module setenvif.\par
+Enabling module filter.\par
+Enabling module deflate.\par
+Enabling module status.\par
+Enabling module reqtimeout.\par
+Enabling conf charset.\par
+Enabling conf localized-error-pages.\par
+Enabling conf other-vhosts-access-log.\par
+Enabling conf security.\par
+Enabling conf serve-cgi-bin.\par
+Enabling site 000-default.\par
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service \f1\u8594?\f0\lang9  /l\par
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.ice.\par
+Processing triggers for ufw (0.36-6ubuntu1) ...\par
+Processing triggers for systemd (245.4-4ubuntu3.19) ...\par
+Processing triggers for man-db (2.9.1-1) ...\par
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...\par
+vagrant@ubuntu-focal:~$ sudo apt install apache\par
+Reading package lists... Done\par
+Building dependency tree\par
+Reading state information... Done\par
+Package apache is not available, but is referred to by another package.\par
+This may mean that the package is missing, has been obsoleted, or\par
+is only available from another source\par
+\par
+\cf5 E: \cf0 Package 'apache' has no installation candidate\par
+vagrant@ubuntu-focal:~$ sudo apt install apache2\par
+Reading package lists... Done\par
+Building dependency tree\par
+Reading state information... Done\par
+apache2 is already the newest version (2.4.41-4ubuntu3.12).\par
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\par
+vagrant@ubuntu-focal:~$ curl localhost\par
+\par
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "{{\field{\*\fldinst{HYPERLINK http://www.w3.or }}{\fldrslt{http://www.w3.or\ul0\cf0}}}}\f0\fs22\par
+<html xmlns="http://www.w3.org/1999/xhtml">\par
+  <!--\par
+    Modified from the Debian original for Ubuntu\par
+    Last updated: 2016-11-16\par
+    See: {{\field{\*\fldinst{HYPERLINK https://launchpad.net/bugs/1288690 }}{\fldrslt{https://launchpad.net/bugs/1288690\ul0\cf0}}}}\f0\fs22\par
+  -->\par
+  <head>\par
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\par
+    <title>Apache2 Ubuntu Default Page: It works</title>\par
+    <style type="text/css" media="screen">\par
+  * \{\par
+    margin: 0px 0px 0px 0px;\par
+    padding: 0px 0px 0px 0px;\par
+  \}\par
+\par
+  body, html \{\par
+    padding: 3px 3px 3px 3px;\par
+\par
+    background-color: #D8DBE2;\par
+\par
+    font-family: Verdana, sans-serif;\par
+    font-size: 11pt;\par
+    text-align: center;\par
+  \}\par
+\par
+  div.main_page \{\par
+    position: relative;\par
+    display: table;\par
+\par
+    width: 800px;\par
+\par
+    margin-bottom: 3px;\par
+    margin-left: auto;\par
+    margin-right: auto;\par
+    padding: 0px 0px 0px 0px;\par
+\par
+    border-width: 2px;\par
+    border-color: #212738;\par
+    border-style: solid;\par
+\par
+    background-color: #FFFFFF;\par
+\par
+    text-align: center;\par
+  \}\par
+\par
+  div.page_header \{\par
+    height: 99px;\par
+    width: 100%;\par
+\par
+    background-color: #F5F6F7;\par
+  \}\par
+\par
+  div.page_header span \{\par
+    margin: 15px 0px 0px 50px;\par
+\par
+    font-size: 180%;\par
+    font-weight: bold;\par
+  \}\par
+\par
+  div.page_header img \{\par
+    margin: 3px 0px 0px 40px;\par
+\par
+    border: 0px 0px 0px;\par
+  \}\par
+\par
+  div.table_of_contents \{\par
+    clear: left;\par
+\par
+    min-width: 200px;\par
+\par
+    margin: 3px 3px 3px 3px;\par
+\par
+    background-color: #FFFFFF;\par
+\par
+    text-align: left;\par
+  \}\par
+\par
+  div.table_of_contents_item \{\par
+    clear: left;\par
+\par
+    width: 100%;\par
+\par
+    margin: 4px 0px 0px 0px;\par
+\par
+    background-color: #FFFFFF;\par
+\par
+    color: #000000;\par
+    text-align: left;\par
+  \}\par
+\par
+  div.table_of_contents_item a \{\par
+    margin: 6px 0px 0px 6px;\par
+  \}\par
+\par
+  div.content_section \{\par
+    margin: 3px 3px 3px 3px;\par
+\par
+    background-color: #FFFFFF;\par
+\par
+    text-align: left;\par
+  \}\par
+\par
+  div.content_section_text \{\par
+    padding: 4px 8px 4px 8px;\par
+\par
+    color: #000000;\par
+    font-size: 100%;\par
+  \}\par
+\par
+  div.content_section_text pre \{\par
+    margin: 8px 0px 8px 0px;\par
+    padding: 8px 8px 8px 8px;\par
+\par
+    border-width: 1px;\par
+    border-style: dotted;\par
+    border-color: #000000;\par
+\par
+    background-color: #F5F6F7;\par
+\par
+    font-style: italic;\par
+  \}\par
+\par
+  div.content_section_text p \{\par
+    margin-bottom: 6px;\par
+  \}\par
+\par
+  div.content_section_text ul, div.content_section_text li \{\par
+    padding: 4px 8px 4px 16px;\par
+  \}\par
+\par
+  div.section_header \{\par
+    padding: 3px 6px 3px 6px;\par
+\par
+    background-color: #8E9CB2;\par
+\par
+    color: #FFFFFF;\par
+    font-weight: bold;\par
+    font-size: 112%;\par
+    text-align: center;\par
+  \}\par
+\par
+  div.section_header_red \{\par
+    background-color: #CD214F;\par
+  \}\par
+\par
+  div.section_header_grey \{\par
+    background-color: #9F9386;\par
+  \}\par
+\par
+  .floating_element \{\par
+    position: relative;\par
+    float: left;\par
+  \}\par
+\par
+  div.table_of_contents_item a,\par
+  div.content_section_text a \{\par
+    text-decoration: none;\par
+    font-weight: bold;\par
+  \}\par
+\par
+  div.table_of_contents_item a:link,\par
+  div.table_of_contents_item a:visited,\par
+  div.table_of_contents_item a:active \{\par
+    color: #000000;\par
+  \}\par
+\par
+  div.table_of_contents_item a:hover \{\par
+    background-color: #000000;\par
+\par
+    color: #FFFFFF;\par
+  \}\par
+\par
+  div.content_section_text a:link,\par
+  div.content_section_text a:visited,\par
+   div.content_section_text a:active \{\par
+    background-color: #DCDFE6;\par
+\par
+    color: #000000;\par
+  \}\par
+\par
+  div.content_section_text a:hover \{\par
+    background-color: #000000;\par
+\par
+    color: #DCDFE6;\par
+  \}\par
+\par
+  div.validator \{\par
+  \}\par
+    </style>\par
+  </head>\par
+  <body>\par
+    <div class="main_page">\par
+      <div class="page_header floating_element">\par
+        <img src="/icons/ubuntu-logo.png" alt="Ubuntu Logo" class="floating_elem\par
+        <span class="floating_element">\par
+          Apache2 Ubuntu Default Page\par
+        </span>\par
+      </div>\par
+<!--      <div class="table_of_contents floating_element">\par
+        <div class="section_header section_header_grey">\par
+          TABLE OF CONTENTS\par
+        </div>\par
+        <div class="table_of_contents_item floating_element">\par
+          <a href="#about">About</a>\par
+        </div>\par
+        <div class="table_of_contents_item floating_element">\par
+          <a href="#changes">Changes</a>\par
+        </div>\par
+        <div class="table_of_contents_item floating_element">\par
+          <a href="#scope">Scope</a>\par
+        </div>\par
+        <div class="table_of_contents_item floating_element">\par
+          <a href="#files">Config files</a>\par
+        </div>\par
+      </div>\par
+-->\par
+      <div class="content_section floating_element">\par
+\par
+\par
+        <div class="section_header section_header_red">\par
+          <div id="about"></div>\par
+          It works!\par
+        </div>\par
+        <div class="content_section_text">\par
+          <p>\par
+                This is the default welcome page used to test the correct\par
+                operation of the Apache2 server after installation on Ubuntu sys\par
+                It is based on the equivalent page on Debian, from which the Ubu\par
+                packaging is derived.\par
+                If you can read this page, it means that the Apache HTTP server\par
+                this site is working properly. You should <b>replace this file</\par
+                <tt>/var/www/html/index.html</tt>) before continuing to operate\par
+          </p>\par
+\par
+\par
+          <p>\par
+                If you are a normal user of this web site and don't know what th\par
+                about, this probably means that the site is currently unavailabl\par
+                maintenance.\par
+                If the problem persists, please contact the site's administrator\par
+          </p>\par
+\par
+        </div>\par
+        <div class="section_header">\par
+          <div id="changes"></div>\par
+                Configuration Overview\par
+        </div>\par
+        <div class="content_section_text">\par
+          <p>\par
+                Ubuntu's Apache2 default configuration is different from the\par
+                upstream default configuration, and split into several files opt\par
+                interaction with Ubuntu tools. The configuration system is\par
+                <b>fully documented in\par
+                /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for t\par
+                documentation. Documentation for the web server itself can be\par
+                found by accessing the <a href="/manual">manual</a> if the <tt>a\par
+                package was installed on this server.\par
+\par
+          </p>\par
+          <p>\par
+                The configuration layout for an Apache2 web server installation\par
+          </p>\par
+          <pre>\par
+/etc/apache2/\par
+|-- apache2.conf\par
+|       `--  ports.conf\par
+|-- mods-enabled\par
+|       |-- *.load\par
+|       `-- *.conf\par
+|-- conf-enabled\par
+|       `-- *.conf\par
+|-- sites-enabled\par
+|       `-- *.conf\par
+          </pre>\par
+          <ul>\par
+                        <li>\par
+                           <tt>apache2.conf</tt> is the main configuration\par
+                           file. It puts the pieces together by including all re\par
+                           files when starting up the web server.\par
+                        </li>\par
+\par
+                        <li>\par
+                           <tt>ports.conf</tt> is always included from the\par
+                           main configuration file. It is used to determine the\par
+                           incoming connections, and this file can be customized\par
+                        </li>\par
+\par
+                        <li>\par
+                           Configuration files in the <tt>mods-enabled/</tt>,\par
+                           <tt>conf-enabled/</tt> and <tt>sites-enabled/</tt> di\par
+                           particular configuration snippets which manage module\par
+                           fragments, or virtual host configurations, respective\par
+                        </li>\par
+\par
+                        <li>\par
+                           They are activated by symlinking available\par
+                           configuration files from their respective\par
+                           *-available/ counterparts. These should be managed\par
+                           by using our helpers\par
+                           <tt>\par
+                                a2enmod,\par
+                                a2dismod,\par
+                           </tt>\par
+                           <tt>\par
+                                a2ensite,\par
+                                a2dissite,\par
+                            </tt>\par
+                                and\par
+                           <tt>\par
+                                a2enconf,\par
+                                a2disconf\par
+                           </tt>. See their respective man pages for detailed in\par
+                        </li>\par
+\par
+                        <li>\par
+                           The binary is called apache2. Due to the use of\par
+                           environment variables, in the default configuration,\par
+                           started/stopped with <tt>/etc/init.d/apache2</tt> or\par
+                           <b>Calling <tt>/usr/bin/apache2</tt> directly will no\par
+                           default configuration.\par
+                        </li>\par
+          </ul>\par
+        </div>\par
+\par
+        <div class="section_header">\par
+            <div id="docroot"></div>\par
+                Document Roots\par
+        </div>\par
+\par
+        <div class="content_section_text">\par
+            <p>\par
+                By default, Ubuntu does not allow access through the web browser\par
+                <em>any</em> file apart of those located in <tt>/var/www</tt>,\par
+                <a href="http://httpd.apache.org/docs/2.4/mod/mod_userdir.html"\par
+                directories (when enabled) and <tt>/usr/share</tt> (for web\par
+                applications). If your site is using a web document root\par
+                located elsewhere (such as in <tt>/srv</tt>) you may need to whi\par
+                document root directory in <tt>/etc/apache2/apache2.conf</tt>.\par
+            </p>\par
+            <p>\par
+                The default Ubuntu document root is <tt>/var/www/html</tt>. You\par
+                can make your own virtual hosts under /var/www. This is differen\par
+                to previous releases which provides better security out of the b\par
+            </p>\par
+        </div>\par
+\par
+        <div class="section_header">\par
+          <div id="bugs"></div>\par
+                Reporting Problems\par
+        </div>\par
+        <div class="content_section_text">\par
+          <p>\par
+                Please use the <tt>ubuntu-bug</tt> tool to report bugs in the\par
+                Apache2 package with Ubuntu. However, check <a\par
+                href="https://bugs.launchpad.net/ubuntu/+source/apache2"\par
+                rel="nofollow">existing bug reports</a> before reporting a new b\par
+          </p>\par
+          <p>\par
+                Please report bugs specific to modules (such as PHP and others)\par
+                to respective packages, not to the web server itself.\par
+          </p>\par
+        </div>\par
+\par
+      </div>\par
+    </div>\par
+    <div class="validator">\par
+    </div>\par
+  </body>\par
+</html>\par
+\par
+vagrant@ubuntu-focal:~$\par
+\f2\par
+}
+ 
